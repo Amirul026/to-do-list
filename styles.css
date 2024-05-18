@@ -1,6 +1,10 @@
+/* styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background: url('https://images.pexels.com/photos/33582/sunrise-phu-quoc-island-ocean.jpg?cs=srgb&dl=pexels-pixabay-33582.jpg&fm=jpg') no-repeat center center fixed;
+    font-family: 'Poppins', sans-serif;
+    background: url('image.jpg') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -10,43 +14,38 @@ body {
 }
 
 .container {
-    background: rgba(160, 188, 177, 0.7); 
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
 }
 
 h1 {
-    text-align: center;
-    color: #333;
+    margin-bottom: 20px;
 }
 
-.input-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-#taskInput {
-    flex: 1;
+input[type="text"] {
+    width: 70%;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 2px solid #8a1fbc;
+    border-radius: 5px;
 }
 
-#addTaskBtn {
-    padding: 10px;
-    background: #28a745;
-    color: #fff;
+button {
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
-    margin-left: 10px;
+    background: #0bc3a7;
+    color: black;
+    border-radius: 5px;
     cursor: pointer;
+    margin: 5px;
 }
 
-#addTaskBtn:hover {
-    background: #218838;
+button:hover {
+    background: #1f4eb3a0;
 }
 
 ul {
@@ -55,47 +54,38 @@ ul {
 }
 
 li {
+    background: #4181da2f;
+    padding: 10px;
+    margin-bottom: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-radius: 5px;
+    border: 2px solid #8a1fbc;
 }
 
-li .task-text {
-    flex: 1;
-    padding: 0 10px;
+li:nth-child(odd) {
+    background: #d52e8760;
 }
 
-li.completed .task-text {
+li span.completed {
     text-decoration: line-through;
-    color: #413e75e7;
+    color: rgb(158, 160, 156);
 }
 
-li button {
-    background: #dc3545;
-    color: #fff;
+li .edit-btn, li .save-btn, li .delete-btn {
+    background: rgb(34, 114, 199);
     border: none;
-    border-radius: 4px;
-    padding: 5px 10px;
     cursor: pointer;
+    padding:5px;
+    font-size: 16px;
+    border-radius: 10px;
 }
 
-li button:hover {
-    background: #c82333;
+li .delete-btn:hover{
+    color: firebrick
 }
 
-#clearAllBtn {
-    width: 100%;
-    padding: 10px;
-    background: #dc3545;
-    color: #fff;
-    border: none;
-    border-radius: 7px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-#clearAllBtn:hover {
-    background: #c82333;
+li .edit-btn:hover, li .save-btn:hover {
+    color: #f4f0f0;
 }
