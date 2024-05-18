@@ -1,8 +1,7 @@
-/* styles.css */
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: url('https://images.pexels.com/photos/33582/sunrise-phu-quoc-island-ocean.jpg?cs=srgb&dl=pexels-pixabay-33582.jpg&fm=jpg') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +10,7 @@ body {
 }
 
 .container {
-    background: white;
+    background: rgba(160, 188, 177, 0.7); 
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -20,28 +19,34 @@ body {
 }
 
 h1 {
-    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
 }
 
-input[type="text"] {
-    width: 70%;
+.input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#taskInput {
+    flex: 1;
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
-button {
-    padding: 10px 20px;
+#addTaskBtn {
+    padding: 10px;
+    background: #28a745;
+    color: #fff;
     border: none;
-    background: #5cb85c;
-    color: white;
-    border-radius: 5px;
+    border-radius: 4px;
+    margin-left: 10px;
     cursor: pointer;
 }
 
-button:hover {
-    background: #4cae4c;
+#addTaskBtn:hover {
+    background: #218838;
 }
 
 ul {
@@ -50,28 +55,47 @@ ul {
 }
 
 li {
-    background: #f9f9f9;
-    padding: 10px;
-    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 5px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
 }
 
-li:nth-child(odd) {
-    background: #f1f1f1;
+li .task-text {
+    flex: 1;
+    padding: 0 10px;
 }
 
-li .delete-btn {
-    background: #d9534f;
-    color: white;
+li.completed .task-text {
+    text-decoration: line-through;
+    color: #413e75e7;
+}
+
+li button {
+    background: #dc3545;
+    color: #fff;
     border: none;
+    border-radius: 4px;
     padding: 5px 10px;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-li .delete-btn:hover {
-    background: #c9302c;
+li button:hover {
+    background: #c82333;
+}
+
+#clearAllBtn {
+    width: 100%;
+    padding: 10px;
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#clearAllBtn:hover {
+    background: #c82333;
 }
